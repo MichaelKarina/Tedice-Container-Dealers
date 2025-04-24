@@ -73,11 +73,36 @@ items.forEach(item => {
   });
 
   const hamburger = document.getElementById('hamburger');
-  const overlayMenu = document.getElementById('overlayMenu');
-  const body = document.body;
+  const mainMenu = document.getElementById('mainMenu');
 
   hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
-    overlayMenu.classList.toggle('active');
-    body.classList.toggle('menu-open');
+    mainMenu.classList.toggle('open');
   });
+
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+    
+    const form = event.target;
+    const formData = new FormData(form);
+  
+    // Send the form data to Formspree using fetch
+    fetch(form.action, {
+      method: "POST",
+      body: formData
+    })
+    .then(response => {
+      if (response.ok) {
+        // Show the thank you message
+        document.getElementById("thank-you-message").style.display = "block";
+        form.reset(); // Reset the form after submission
+      } else {
+        alert("Something went wrong, please try again.");
+      }
+    })
+    .catch(error => {
+      console.error("Error:", error);
+      alert("Something went wrong, please try again.");
+    });
+  });
+  

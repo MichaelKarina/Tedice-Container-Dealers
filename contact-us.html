@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact Us - Tedice Container Dealers</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
@@ -19,6 +20,22 @@
       color: #333;
     }
 
+    .nav-links a,
+  .contact-info a,
+  .social-icons a {
+    color: #7c7c7c;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover,
+  .contact-info a:hover,
+  .social-icons a:hover {
+    color: #007bff;
+  }
+  
     .contact-wrapper {
       max-width: 1200px;
       margin: 60px auto;
@@ -102,6 +119,39 @@
       cursor: pointer;
       transition: 0.3s ease;
     }
+    .top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: #f4f4f4;
+  font-size: 14px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.top-bar a {
+  color: #0c3c78;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.top-bar a:hover {
+  text-decoration: underline;
+}
+
+.contact-info,
+.social-icons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.social-icons a {
+  margin-left: 10px;
+  font-size: 16px;
+}
+
 
     .contact-form button:hover {
       background-color: #1e40af;
@@ -117,30 +167,32 @@
 </head>
 <body>
  <!-- main -->
- <div class="top-bar">
-    <div class="contact-info">
-      <a href="mailto:info@example.com"><i class="fas fa-envelope"></i> info@example.com</a> 
-      <a href="tel:+1234567890"><i class="fas fa-phone"></i> +123 456 7890</a>
-    </div>
-    <div class="social-icons">
-      <a href="https://facebook.com/yourpage" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter"></i></a>
-      <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-    </div>
+ <!-- <div class="top-bar">
+  <div class="contact-info">
+    <a href="mailto:info@example.com"><i class="fas fa-envelope"></i> Info@tediceexpress.co.ke</a> |
+    <a href="mailto:info@example.com"><i class="fas fa-envelope"></i> seth.oduor@tediceexpress.co.ke</a> |
+    <a href="tel:+1234567890"><i class="fas fa-phone"></i> +2547 12 999 279</a>
   </div>
+  <div class="social-icons">
+    <a href="https://facebook.com/yourpage" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+</div> -->
+
   <div class="lower-section">
     <div class="logo">
       <img src="images/Tedice Logo.png" alt="Logo" />
     </div>
   
     <div class="quick-links">
-        <div class="nav-links">
-            <a href="#about">Who We Are</a>
-            <a href="#services">Core Values</a>
-            <a href="#contact"> Why Choose Us</a>
-          </div>          
-    </div>
+      <div class="nav-links">
+          <a href="about-us.html#who-we-are">Who We Are</a>
+          <a href="about-us.html#core-values">Core Values</a>
+          <a href="about-us.html#why-choose-us"> Why Choose Us</a>
+        </div>          
+  </div>
   
     <div class="quote-button">
       <a href="quote.html" class="btn-quote">Get a Quote</a>
@@ -161,23 +213,57 @@
     <!-- Left Side Info -->
     <div class="contact-info">
       <h2>Contact Us</h2>
-      <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
-      <p><i class="fas fa-envelope"></i> info@yourcompany.com</p>
-      <p><i class="fas fa-phone-alt"></i> +254 700 123 456</p>
+      <p><i class="fas fa-map-marker-alt"></i> Mombasa, Kenya</p>
+      <p><i class="fas fa-map-marker-alt"></i> 
+        Haile Selessie Avenue<br>
+        Mombasa<br>
+        Alshifa Building, 1st Floor<br>
+        P.O BOX 340-80100
+      </p>      
+      <p><i class="fas fa-envelope"></i> Info@tediceexpress.co.ke</p>
+      <p><i class="fas fa-phone-alt"></i> 0712 999 279</p>
       <p><i class="fas fa-clock"></i> Mon - Fri: 8:00AM - 6:00PM</p>
     </div>
 
     <!-- Right Side Form -->
     <div class="contact-form">
       <h3>Send Us a Message</h3>
-      <form action="#" method="POST">
+      <form id="contact-form" action="https://formspree.io/f/mldbekko" method="POST">
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
         <input type="tel" name="phone" placeholder="Your Phone Number" />
         <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
         <button type="submit">Submit</button>
       </form>
+      <div id="thank-you-message" style="display: none; color: green; font-weight: bold; text-align: center; margin-top: 20px;">
+        Thank you for your message! We'll get back to you soon.
+      </div>
     </div>
+    
+    <script>
+      const form = document.getElementById('contact-form');
+      const thankYouMessage = document.getElementById('thank-you-message');
+    
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        const formData = new FormData(form);
+    
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+    
+        if (response.ok) {
+          form.reset();
+          thankYouMessage.style.display = 'block';
+        } else {
+          alert('Oops! Something went wrong. Please try again.');
+        }
+      });
+    </script>
   </section>
 
   <div class="scroll-progress">
