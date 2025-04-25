@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Tedice Express Agencies offers reliable shipping container sales, rentals, and customizations in Mombasa. Contact us today!">
+  <meta name="keywords" content="Shipping Containers Mombasa, Container Rentals Kenya, Container Sales Mombasa, Container Customization, Tedice Express Agencies">
+  <meta name="robots" content="index, follow">
   <title>Contact Us - Tedice Container Dealers</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
@@ -35,51 +37,6 @@
   .social-icons a:hover {
     color: #007bff;
   }
-
-  .map-only-section {
-  padding: 60px 20px;
-  background: #f4f4f4;
-  text-align: center;
-}
-
-.map-container {
-  max-width: 900px;
-  margin: auto;
-  background: #fff;
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-}
-
-.map-container h2 {
-  margin-bottom: 10px;
-  font-size: 28px;
-  color: #333;
-}
-
-.map-container p {
-  margin-bottom: 25px;
-  color: #555;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-.map-frame {
-  width: 100%;
-  height: 400px;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-@media (max-width: 768px) {
-  .map-container h2 {
-    font-size: 24px;
-  }
-  .map-frame {
-    height: 300px;
-  }
-}
-
   
     .contact-wrapper {
       max-width: 1200px;
@@ -211,20 +168,6 @@
   </style>
 </head>
 <body>
- <!-- main -->
- <!-- <div class="top-bar">
-  <div class="contact-info">
-    <a href="mailto:info@example.com"><i class="fas fa-envelope"></i> Info@tediceexpress.co.ke</a> |
-    <a href="mailto:info@example.com"><i class="fas fa-envelope"></i> seth.oduor@tediceexpress.co.ke</a> |
-    <a href="tel:+1234567890"><i class="fas fa-phone"></i> +2547 12 999 279</a>
-  </div>
-  <div class="social-icons">
-    <a href="https://facebook.com/yourpage" target="_blank"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter"></i></a>
-    <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-  </div>
-</div> -->
 
   <div class="lower-section">
     <div class="logo">
@@ -232,12 +175,12 @@
     </div>
   
     <div class="quick-links">
-      <div class="nav-links">
-          <a href="about-us.html#who-we-are">Who We Are</a>
-          <a href="about-us.html#core-values">Core Values</a>
-          <a href="about-us.html#why-choose-us"> Why Choose Us</a>
-        </div>          
-  </div>
+        <div class="nav-links">
+            <a href="#about">Who We Are</a>
+            <a href="#services">Core Values</a>
+            <a href="#contact"> Why Choose Us</a>
+          </div>          
+    </div>
   
     <div class="quote-button">
       <a href="quote.html" class="btn-quote">Get a Quote</a>
@@ -258,81 +201,25 @@
     <!-- Left Side Info -->
     <div class="contact-info">
       <h2>Contact Us</h2>
-      <p><i class="fas fa-map-marker-alt"></i> Mombasa, Kenya</p>
-      <p><i class="fas fa-map-marker-alt"></i> 
-        Haile Selessie Avenue<br>
-        Mombasa<br>
-        Alshifa Building, 1st Floor<br>
-        P.O BOX 340-80100
-      </p>      
-      <p><i class="fas fa-envelope"></i> Info@tediceexpress.co.ke</p>
-      <p><i class="fas fa-phone-alt"></i> 0729896689  <br> 0799931973</p>
+      <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+      <p><i class="fas fa-envelope"></i> info@yourcompany.com</p>
+      <p><i class="fas fa-phone-alt"></i> +254 700 123 456</p>
       <p><i class="fas fa-clock"></i> Mon - Fri: 8:00AM - 6:00PM</p>
     </div>
 
-    <div class="contact-section">
-  <!-- Right Side Form -->
+    <!-- Right Side Form -->
     <div class="contact-form">
       <h3>Send Us a Message</h3>
-      <form id="contact-form" action="https://formspree.io/f/xnndnaep" method="POST">
+      <form action="#" method="POST">
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
         <input type="tel" name="phone" placeholder="Your Phone Number" />
         <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
         <button type="submit">Submit</button>
       </form>
-      <div id="thank-you-message" style="display: none; color: green; font-weight: bold; text-align: center; margin-top: 20px;">
-        Thank you for your message! We'll get back to you soon.
-      </div>
     </div>
-    
-    
-    <script>
-      const form = document.getElementById('contact-form');
-      const thankYouMessage = document.getElementById('thank-you-message');
-    
-      form.addEventListener('submit', async function (e) {
-        e.preventDefault();
-        const formData = new FormData(form);
-    
-        const response = await fetch(form.action, {
-          method: form.method,
-          body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
-        });
-    
-        if (response.ok) {
-          form.reset();
-          thankYouMessage.style.display = 'block';
-        } else {
-          alert('Oops! Something went wrong. Please try again.');
-        }
-      });
-    </script>
   </section>
 
-  <section class="map-only-section">
-    <div class="map-container">
-      <h2>Find Us at Alshifa Building</h2>
-      <p>P.O BOX 340-80100 MOMBASA<br>
-      Alshifa Building, Haile Selassie Avenue, Mombasa</p>
-      
-      <div class="map-frame">
-        <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.801710568095!2d39.657168!3d-4.060807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x184013272e74d0b7%3A0x38b0589bdd837bec!2sTedice%20Express%20Agencies%20Ltd!5e0!3m2!1sen!2ske!4v1745569594084!5m2!1sen!2ske" 
-        width="100%" 
-        height="100%" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-      </div>
-    </div>
-  </section>
-  
   <div class="scroll-progress">
     <svg class="progress-ring" width="60" height="60">
       <circle class="ring-bg" cx="30" cy="30" r="26" />
@@ -369,8 +256,6 @@
               </ul>
             </div>
           </div>
-          
-          
                 
           <!-- Subscription Form -->
           <div class="footer-subscribe">
@@ -393,8 +278,7 @@
       </div>
     </div>
   </footer>
-  
-    
+
     <script src="script.js"></script>
 </body>
 </html>
