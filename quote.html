@@ -20,14 +20,13 @@
           <div class="contact-info">
             <a href="mailto:info@example.com"><i class="fas fa-envelope"></i> Info@tediceexpress.co.ke</a>  |
             <a href="mailto:info@example.com"><i class="fas fa-envelope"></i> seth.oduor@tediceexpress.co.ke</a>  |
-            <a href="tel:+1234567890"><i class="fas fa-phone"></i> +2547 12 999 279</a>
+            <a href="tel:+1234567890"><i class="fas fa-phone"></i> +254729896689</a>
           </div>
-    <div class="social-icons">
-      <a href="https://facebook.com/yourpage" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter"></i></a>
-      <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-    </div>
+          <div class="social-icons">
+            <a href="https://facebook.com/Tediceexpress?_rdc=1&_rdr#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/tedice_logistics/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/254712999279" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          </div>
   </div>
   <div class="lower-section">
     <div class="logo">
@@ -35,12 +34,12 @@
     </div>
   
     <div class="quick-links">
-        <div class="nav-links">
-            <a href="#about">Who We Are</a>
-            <a href="#services">Core Values</a>
-            <a href="contact-us.html"> Why Choose Us</a>
-          </div>          
-    </div>
+      <div class="nav-links">
+          <a href="about-us.html#who-we-are">Who We Are</a>
+          <a href="about-us.html#core-values">Core Values</a>
+          <a href="about-us.html#why-choose-us"> Why Choose Us</a>
+        </div>          
+  </div>
   
     <div class="quote-button">
       <a href="quote.html" class="btn-quote">Get a Quote</a>
@@ -59,7 +58,7 @@
  <!-- main end -->
         <section class="quote-form-section">
             <h2>Get a Quote</h2>
-            <form class="quote-form" action="send.php" method="post">
+            <form class="quote-form" action="https://formspree.io/f/mblolrnd" method="post">
           
               <div class="form-grid">
                 <!-- Column 1 -->
@@ -119,6 +118,41 @@
                 </div>
               </div>
             </form>
+            <!-- Success Message -->
+<div id="success-message" style="display:none; color: green; margin-top: 20px;">
+  Thank you! Your request has been sent successfully.
+</div>
+<script>
+  const form = document.querySelector(".quote-form");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const data = new FormData(form);
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    const successMessage = document.getElementById("success-message");
+
+    if (response.ok) {
+      // Show success message
+      successMessage.style.display = "block";
+
+      // Optionally, you can reset the form after submission
+      form.reset();
+    } else {
+      // Show error message if something goes wrong
+      successMessage.style.color = "red";
+      successMessage.textContent = "There was an error submitting your request. Please try again later.";
+      successMessage.style.display = "block";
+    }
+  });
+</script>
           </section>
           
           <div class="scroll-progress">
